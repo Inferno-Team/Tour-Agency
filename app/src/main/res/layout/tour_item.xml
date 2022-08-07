@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:layout_margin="8dp">
+
+    <com.skydoves.androidribbon.RibbonView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="13dp"
+        android:text="Passed"
+        android:id="@+id/ribbon"
+        android:layout_margin="3dp"
+        android:visibility="visible"
+        android:textSize="13sp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ribbon_background_color="@color/gray_500"
+
+        app:ribbon_rotation="45" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card_item"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="8dp">
+
+
+            <TextView
+                android:id="@+id/city_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/lato"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="City Name" />
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textColor="@color/purple_500"
+                android:textSize="15sp"
+                app:drawableStartCompat="@drawable/ic_baseline_attach_money_24"
+                app:drawableTint="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/city_name"
+                tools:text="15000" />
+
+            <TextView
+                android:id="@+id/seat_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textColor="@color/purple_500"
+                android:textSize="15sp"
+                app:drawableStartCompat="@drawable/ic_baseline_airline_seat_recline_normal_24"
+                app:drawableTint="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cost"
+                tools:text="15" />
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textColor="@color/purple_500"
+                android:textSize="15sp"
+                app:drawableStartCompat="@drawable/ic_baseline_more_time_24"
+                app:drawableTint="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seat_count"
+                tools:text="24-11-2022" />
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textColor="@color/purple_500"
+                android:textSize="15sp"
+                app:drawableStartCompat="@drawable/ic_baseline_timer_off_24"
+                app:drawableTint="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/start_time"
+                tools:text="24-12-2022" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

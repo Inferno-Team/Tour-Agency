@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.vipulasri.timelineview.TimelineView
+        android:id="@+id/timeline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        app:marker="@drawable/marker_circle"
+        app:endLineColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:linePadding="2dp"
+        app:lineWidth="4dp"
+        app:markerInCenter="false"
+        app:startLineColor="@color/purple_500" />
+
+    <TextView
+        android:id="@+id/day_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="2dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/timeline"
+        app:layout_constraintStart_toEndOf="@id/timeline"
+        app:layout_constraintTop_toTopOf="@id/timeline"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Day 1" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inner_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@id/timeline"
+        app:layout_constraintTop_toBottomOf="@id/day_name"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/inner_tour_details" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

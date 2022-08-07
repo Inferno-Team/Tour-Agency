@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tour Agency</string>
+    <string name="recent_tours">Recent Tours</string>
+    <string name="tours">Tours</string>
+    <string name="map_token">pk.eyJ1IjoibW9oYW1tZWRpc3NhIiwiYSI6ImNsMnRoZmo2azAzaHIzZG85NWpqM3RldHYifQ.G0h7J-QiZCB8T7xZ40ZPHA</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="tour_price">Price : %1$.2f S.P</string>
+</resources>

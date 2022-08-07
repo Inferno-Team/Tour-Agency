@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment_nav"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:orderInCategory="1"
+        android:title="Home" />
+    <item
+        android:id="@+id/agencyFragment"
+        android:icon="@drawable/ic_travel_svgrepo_com"
+        android:orderInCategory="2"
+        android:title="Agencies" />
+    <item
+        android:id="@+id/cartFragment"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:orderInCategory="3"
+        android:title="My Cart" />
+
+</menu>

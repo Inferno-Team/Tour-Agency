@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment_nav">
+
+    <fragment
+        android:id="@+id/homeFragment_nav"
+        tools:layout="@layout/home_fragment"
+        android:name="com.inferno.mobile.touragency.ui.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tourDetailsFragment"
+            app:destination="@id/tourDetailsFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/login_fragment"
+        android:id="@+id/loginFragment"
+        android:name="com.inferno.mobile.touragency.ui.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/signup_fragment"
+        android:id="@+id/signupFragment"
+        android:name="com.inferno.mobile.touragency.ui.signup.SignupFragment"
+        android:label="SignupFragment" />
+    <fragment
+        tools:layout="@layout/place_item"
+        android:id="@+id/placeFragment"
+        android:name="com.inferno.mobile.touragency.ui.place.PlaceFragment"
+        android:label="PlaceFragment" >
+        <argument
+            android:name="place_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/agencyToursFragment"
+        android:name="com.inferno.mobile.touragency.ui.agency_tours.AgencyToursFragment"
+        android:label="agency_tour_fragment"
+        tools:layout="@layout/agency_tour_fragment" >
+        <argument
+            android:name="agencyId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_agencyToursFragment_to_tourDetailsFragment"
+            app:destination="@id/tourDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agencyFragment"
+        android:name="com.inferno.mobile.touragency.ui.agencies.AgencyFragment"
+        android:label="agency_fragment"
+        tools:layout="@layout/agency_fragment" >
+        <action
+            android:id="@+id/action_agencyFragment_to_agencyToursFragment"
+            app:destination="@id/agencyToursFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tourDetailsFragment"
+        android:name="com.inferno.mobile.touragency.ui.tour_details.TourDetailsFragment"
+        android:label="tour_details_fragment"
+        tools:layout="@layout/tour_details_fragment" >
+        <argument
+            android:name="tour_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_tourDetailsFragment_to_placeFragment"
+            app:destination="@id/placeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.inferno.mobile.touragency.ui.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" />
+    <fragment
+        android:id="@+id/cartFragment"
+        tools:layout="@layout/cart_fragment"
+        android:name="com.inferno.mobile.touragency.ui.cart.CartFragment"
+        android:label="CartFragment" >
+        <action
+            android:id="@+id/action_cartFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.inferno.mobile.touragency.ui.checkout.CheckoutFragment"
+        android:label="checkout_fragment"
+        tools:layout="@layout/checkout_fragment" >
+        <argument
+            android:name="tour_id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

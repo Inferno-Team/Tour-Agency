@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="9dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:id="@+id/waiting_card"
+            app:cardBackgroundColor="@color/purple_500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/cart_item_background" />
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_margin="2dp"
+         android:padding="8dp"
+         android:layout_height="match_parent">
+         <ImageView
+             android:id="@+id/agency_logo"
+             android:layout_width="48dp"
+             android:layout_height="48dp"
+             android:layout_margin="8dp"
+             android:padding="2dp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             tools:src="@drawable/logo" />
+
+         <TextView
+             android:id="@+id/agency_name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/black"
+             android:textSize="19sp"
+             android:textStyle="bold"
+             app:layout_constraintBottom_toBottomOf="@id/agency_logo"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.1"
+             app:layout_constraintStart_toEndOf="@id/agency_logo"
+             app:layout_constraintTop_toTopOf="@id/agency_logo"
+             app:layout_constraintVertical_bias="0"
+             tools:text="Agency Name" />
+
+         <TextView
+             android:id="@+id/tour_price"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintBottom_toBottomOf="@id/agency_logo"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.1"
+             app:layout_constraintStart_toEndOf="@id/agency_logo"
+             app:layout_constraintTop_toBottomOf="@id/agency_name"
+             app:layout_constraintVertical_bias="0"
+             tools:text="Tour Name" />
+         <TextView
+             android:id="@+id/tour_seat_number"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintBottom_toBottomOf="@id/agency_logo"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.1"
+             app:layout_constraintStart_toEndOf="@id/agency_logo"
+             app:layout_constraintTop_toBottomOf="@id/tour_price"
+             app:layout_constraintVertical_bias="0"
+             android:visibility="gone"
+             tools:text="Tour Name" />
+
+         <ImageView
+             android:id="@+id/check_btn"
+             android:layout_width="32dp"
+             android:layout_height="32dp"
+             android:layout_marginEnd="8dp"
+             android:src="@drawable/ic_baseline_check_24"
+             app:layout_constraintBottom_toBottomOf="@id/agency_logo"
+             app:layout_constraintEnd_toStartOf="@id/remove_btn"
+             app:layout_constraintTop_toTopOf="@id/agency_logo"
+             app:tint="@color/teal_700" />
+
+         <ImageView
+             android:id="@+id/remove_btn"
+             android:layout_width="32dp"
+             android:layout_height="32dp"
+             android:src="@drawable/ic_outline_delete_24"
+             app:layout_constraintBottom_toBottomOf="@id/agency_logo"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="@id/agency_logo"
+             app:tint="@color/purple_500" />
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

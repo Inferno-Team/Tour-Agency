@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content">
+
+    <com.github.vipulasri.timelineview.TimelineView
+        android:id="@+id/timeline"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        app:endLineColor="@color/purple_500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:linePadding="2dp"
+        app:lineWidth="4dp"
+        app:layout_constraintVertical_bias="1"
+        app:marker="@drawable/inner_marker_circlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:markerInCenter="true"
+        app:startLineColor="@color/purple_500" />
+
+    <TextView
+        android:id="@+id/day_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="2dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/timeline"
+        app:layout_constraintStart_toEndOf="@id/timeline"
+        app:layout_constraintTop_toTopOf="@id/timeline"
+        tools:text="Day 1" />
+    <TextView
+        android:id="@+id/second_mame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/lato"
+        android:padding="2dp"
+        android:textColor="@color/gray_200"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/timeline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@id/day_name"
+        app:layout_constraintTop_toTopOf="@id/timeline"
+        tools:text="8:00 - 9:45" />
+</androidx.constraintlayout.widget.ConstraintLayout>
