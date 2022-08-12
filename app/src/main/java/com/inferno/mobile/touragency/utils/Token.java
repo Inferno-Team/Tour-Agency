@@ -8,6 +8,7 @@ public class Token {
     private final static String SHARED_NAME = "tour.shared";
     private final static String TOKEN_FIELD = "token";
     private final static String IS_LOGGED_IN_FIELD = "is_logged_in";
+    public  final static String MAP_TOKEN = "sk.eyJ1IjoibW9oYW1tZWRpc3NhIiwiYSI6ImNsNnF2cnlscTB2NGozam9hczYzdno1MHIifQ.Z3pbEDN-q41W_BYkK4htYQ";
 
     private static SharedPreferences shared(Context context) {
         return context.getSharedPreferences(SHARED_NAME, Context.MODE_PRIVATE);

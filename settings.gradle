@@ -8,6 +8,9 @@ pluginManagement {
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    def token = "sk.eyJ1IjoibW9oYW1tZWRpc3NhIiwiYSI6ImNsNnF2cnlscTB2NGozam9hczYzdno1MHIifQ.Z3pbEDN-q41W_BYkK4htYQ"
+
+
     repositories {
         google()
         mavenCentral()
@@ -22,7 +25,7 @@ dependencyResolutionManagement {
                 // This should always be `mapbox` (not your username).
                 username = "mapbox"
                 // Use the secret token you stored in gradle.properties as the password
-                password = MAPBOX_DOWNLOADS_TOKEN
+                password = token
             }
         }
     }

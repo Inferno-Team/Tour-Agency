@@ -26,7 +26,7 @@ import retrofit2.http.Query;
 
 public interface API {
 
-    String BASE_IP = "http://192.168.43.114:8000/";
+    String BASE_IP = "http://192.168.43.113:8000/";
 //    String BASE_IP = "http://192.168.1.7:8000/";
 
     @POST("api/login")
